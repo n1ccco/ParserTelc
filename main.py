@@ -39,10 +39,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Parse and fetch data from telc results API")
     
     parser.add_argument("birthday", type=str, help="Your birthday date for the query in YYYY-MM-DD format (e.g., 2000-02-22)")
-    parser.add_argument("base_number", type=str, help="Base number of member for the query (e.g., 0088541)")
+    parser.add_argument("base_number", type=str, help="Number of the known member for the query (e.g., 0088541)")
     parser.add_argument("number_range_offset", type=int, help="Offset range for number (e.g., 20 for -20 to +20)")
     parser.add_argument("base_date", type=str, help="Day of your exam for the query in YYYY-MM-DD format (e.g., 2024-08-02)")
-    parser.add_argument("date_range_offset", type=int, help="Offset range for date (e.g., 14 for 14 days before and after)")
+    parser.add_argument("date_range_offset", type=int, help="Positiv offset range for exam date (e.g., 14 for 14 days after exam)")
 
     args = parser.parse_args()
     
